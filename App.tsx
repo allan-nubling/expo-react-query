@@ -33,11 +33,18 @@ import {
   SimpleDataPageRoute,
   SimpleDataPageTitle,
 } from "./Src/Modules/SimpleData/Pages/SimpleDataForm";
+import {
+  CharactersPageWithInfiniteQuery,
+  CharactersPageWithInfiniteQueryParams,
+  CharactersPageWithInfiniteQueryRoute,
+  CharactersPageWithInfiniteQueryTitle,
+} from "./Src/Modules/Character/Pages/CharactersWithInfiniteQuery";
 
 export type StackParamList = {
   [CharactersHomeRoute]: CharactersHomeParams;
   [CharactersPageWithStateRoute]: CharactersPageWithStateParams;
   [CharactersPageWithQueryRoute]: CharactersPageWithQueryParams;
+  [CharactersPageWithInfiniteQueryRoute]: CharactersPageWithInfiniteQueryParams;
   [CharacterDetailPageRoute]: CharacterDetailPageParams;
   [SimpleDataPageRoute]: SimpleDataPageParams;
 };
@@ -63,6 +70,11 @@ export default function App() {
             name={CharactersPageWithQueryRoute}
             component={CharactersPageWithQuery}
             options={{ title: CharactersPageWithQueryTitle }}
+          />
+          <Stack.Screen
+            name={CharactersPageWithInfiniteQueryRoute}
+            component={CharactersPageWithInfiniteQuery}
+            options={{ title: CharactersPageWithInfiniteQueryTitle }}
           />
           <Stack.Screen
             name={CharacterDetailPageRoute}

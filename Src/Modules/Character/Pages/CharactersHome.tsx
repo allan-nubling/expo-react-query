@@ -13,6 +13,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { StackParamList } from "../../../../App";
 import { CharactersPageWithQueryRoute } from "./CharactersWithQuery";
 import { CharactersPageWithStateRoute } from "./CharactersWithState";
+import { CharactersPageWithInfiniteQueryRoute } from "./CharactersWithInfiniteQuery";
 
 export const CharactersHomeRoute = "CharactersHome";
 export const CharactersHomeTitle = "Characters";
@@ -36,6 +37,12 @@ export function CharactersHome() {
         onPress={() => navigate(CharactersPageWithQueryRoute)}
       >
         <Text style={styles.buttonText}>React Query</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.buttonBackground}
+        onPress={() => navigate(CharactersPageWithInfiniteQueryRoute)}
+      >
+        <Text style={styles.buttonText}>Infinity React Query</Text>
       </TouchableOpacity>
     </View>
   );

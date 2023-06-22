@@ -8,6 +8,7 @@ export const FetchCharacterByIdQuery = gql`
       status
       species
       gender
+      image
     }
   }
 `;

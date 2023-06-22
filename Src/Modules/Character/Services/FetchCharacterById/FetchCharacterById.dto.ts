@@ -5,5 +5,6 @@ export type FetchCharacterByIdDTO = {
     status: string;
     species: string;
     gender: string;
+    image: string;
   };
 };
